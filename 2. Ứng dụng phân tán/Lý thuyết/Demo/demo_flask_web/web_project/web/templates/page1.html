@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="600">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <title>Search</title>
+    <style>
+    </style>
+</head>
+<body style="margin:10px">
+
+    <div class="align-center">
+        <div>
+            <form action="/page1/" method="get">
+                <div class="form-group">
+                    <div>
+                        <input id="txtQuestionBox" name="question" type="text" placeholder="Hãy hỏi ..." class="form-control"
+                               style="display: inline-block; color:blue;" value="{{question if question else ''}}"/>
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    {% if question %}
+    <div id="divAnswer">
+        <div class="panel panel-default" style="display: inline-block; color:blue;">
+            {% for doc in docs %}
+            <div class="panel-heading">
+                {{doc.title}}
+            </div>
+
+            <div class="panel-body">
+                {{doc.text}}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+
+</body>
+</html>

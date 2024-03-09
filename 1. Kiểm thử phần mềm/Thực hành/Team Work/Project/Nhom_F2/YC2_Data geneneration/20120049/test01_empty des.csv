@@ -1,0 +1,11 @@
+Description,source_account_id,Source account,Amount,destination_account_id,Destination Account,Foreign amount
+,5,Jodie Cabrera,178.67,1,Kaylee Wood,192.77
+,3,Alma Hull,144.71,,"",-12.31
+,5,Jodie Cabrera,71.8,,"",1.0
+,2,Emmie Oconnor,58.3,1,Kaylee Wood,63.93
+,4,Gabriella Nguyen,289.16,1,,-18.33
+,5,Jodie Cabrera,127.92,4,Gabriella Nguyen,92.16
+,2,Emmie Oconnor,298.88,1,Kaylee Wood,201.68
+,5,Jodie Cabrera,68.1,2,,247.45
+,4,Gabriella Nguyen,186.09,1,Kaylee Wood,171.44
+,4,Gabriella Nguyen,239.56,1,Kaylee Wood,169.57

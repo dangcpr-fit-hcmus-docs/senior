@@ -1,0 +1,50 @@
+﻿<Window x:Class="DataBindingOneObject.MobileWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DataBindingOneObject"
+        mc:Ignorable="d"
+        Title="MobileWindow" Height="550" Width="800" Loaded="Window_Loaded">
+    <Window.Resources>
+        <local:RelativeToAbsoluteConverter x:Key="absoluteConverter"/>
+        <local:TuitionToCurrencyConverter x:Key="currencyConverter" />
+    </Window.Resources>
+    <Canvas>
+        <ListView Canvas.Left="140" Canvas.Top="44" Name ="MobileComboBox" Width="440" Height="170" SelectionChanged="MobileComboBox_SelectionChanged">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="{Binding Image, Converter={StaticResource absoluteConverter}}" Width="20" Height ="20" Margin="4" />
+                        <TextBlock Text="{Binding PhoneName}" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Content="Add" Click="AddItem_OnPressed" Canvas.Left="591" Canvas.Top="48" />
+        <Button Content="Remove" Click="RemoveItem_OnPressed" Canvas.Left="631" Canvas.Top="48" />
+        <Button Content="Update" Click="UpdateItem_OnPressed" Canvas.Left="691" Canvas.Top="48" />
+        <Grid Height="200" Width="600" Canvas.Left="130" Canvas.Top="220">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0*" ></ColumnDefinition>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="400"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="100"/>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Label Content="Phone’s name" VerticalAlignment="Center" Grid.Column="0" Grid.ColumnSpan="2"/>
+            <Label Name ="PhoneNameLabel" Content="{Binding PhoneName}" VerticalAlignment="Center" Grid.Column="2"/>
+            <Label Content="Image" VerticalAlignment="Center" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"/>
+            <Image Name="ImageLabel" HorizontalAlignment="Left" Source="{Binding Image, Converter={StaticResource absoluteConverter}}" Grid.Column="2" Margin="0,33,0,0" Grid.RowSpan="2"/>
+            <Label Content="Manufacturer" VerticalAlignment="Center" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"/>
+            <Label Name ="ManufacturerLabel" Content="{Binding Manufacturer}" VerticalAlignment="Center" Grid.Row="2" Grid.Column="2"/>
+            <Label Content="Price" VerticalAlignment="Center" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"/>
+            <Label Name ="PriceLabel" Content="{Binding Price, Converter={StaticResource currencyConverter}}" VerticalAlignment="Center" Grid.Row="3" Grid.Column="2"/>
+        </Grid>
+        <Button Content="Submit" Canvas.Left="393" Canvas.Top="475" Name ="SubmitButton" Click="SubmitButton_onPressed"/>
+    </Canvas>
+</Window>

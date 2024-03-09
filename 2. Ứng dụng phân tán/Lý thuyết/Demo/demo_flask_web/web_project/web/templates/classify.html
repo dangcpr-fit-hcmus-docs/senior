@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %} Phân loại câu hỏi {% endblock %}
+
+{% block content %}
+    <h1>Phân loại câu hỏi</h1>
+
+    <div class="align-center">
+        <div>
+
+            <form action="/classify/" method="post">
+                <div class="form-group">
+                    <div>
+                        <textarea id="txtQuestionBox"
+                                  name="question"
+                                  placeholder="Câu hỏi ..."
+                                  class="form-control"
+                                  rows="5"
+                                  style="display: inline-block; color:blue; width:300px">{{data.question if data.question else ''}}</textarea>
+
+                    </div>
+                    <button type="submit" class="btn btn-primary">Classify</button>
+                </div>
+            </form>
+        </div>
+        {% if data.result %}
+             {% for x in data.result %}
+                <div>
+                    <strong>{{x.0}}</strong> -  {{x.1}}
+                </div>
+            {% endfor %}
+        {% endif %}
+
+    </div>
+
+
+{% endblock %}
+</html>

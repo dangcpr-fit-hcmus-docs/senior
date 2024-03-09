@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %} Search page {% endblock %}
+
+{% block content %}
+    <h1>Search page</h1>
+
+    <div class="align-center">
+        <div>
+
+            <form action="/search/" method="get">
+                <div class="form-group">
+                    <div>
+                        <input id="txtQuestionBox" name="question" type="text" placeholder="Hãy hỏi ..." class="form-control"
+                               style="display: inline-block; color:blue; width:400px"
+                               value="{{question if question else ''}}"/>
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    {% if question %}
+    <div id="divAnswer">
+        <div class="panel panel-default" style="display: inline-block;">
+            {% for doc in docs %}
+            <div class="panel-heading">
+                <strong>{{doc.title}}</strong>
+            </div>
+
+            <div class="panel-body">
+                {{doc.text}}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+
+{% endblock %}
+</html>

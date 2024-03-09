@@ -1,0 +1,22 @@
+﻿<Window x:Class="DataBindingOneObject.UpdateItem"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DataBindingOneObject"
+        mc:Ignorable="d"
+        Title="UpdateItem" Height="450" Width="800" Loaded="Window_Loaded">
+    <Canvas>
+        <TextBlock Text="Id" Canvas.Left="260" Canvas.Top="96" />
+        <TextBox x:Name="idTextBox" Width="120" Canvas.Left="306" Canvas.Top="96" IsReadOnly="True" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <TextBlock Text="Name" Canvas.Left="260" Canvas.Top="131" />
+        <TextBox x:Name="nameTextBox" Width="120" Canvas.Left="307" Canvas.Top="131"  HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <TextBlock Text="Cover Image Nhập tên file" Canvas.Left="226" Canvas.Top="170" HorizontalAlignment="Left" VerticalAlignment="Center" Width="77" TextWrapping="Wrap"/>
+        <TextBox x:Name="coverImageTextBox" Width="120" Canvas.Left="307" Canvas.Top="179"  HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <TextBlock Text="Author" Canvas.Left="260" Canvas.Top="220" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <TextBox x:Name="authorTextBox" Width="120" Canvas.Left="307" Canvas.Top="220" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <TextBlock Text="Published year" Canvas.Left="216" Canvas.Top="256" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <TextBox x:Name="publisedYearTextBox" Width="120" Canvas.Left="308" Canvas.Top="257" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Button Click="Button_Click" Content="Update Item" Canvas.Left="311" Canvas.Top="290" />
+    </Canvas>
+</Window>

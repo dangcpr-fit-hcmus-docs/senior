@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Tính tổng 2 số</h1>
+    <form action="/hello/" method="get">
+        <input name="so1" type="text" />
+        <input name="so2" type="text" />
+        <input type="submit" value="Tính tổng" />
+    </form>
+
+    {% if result %}
+        Tổng là: {{result}}
+    {% endif %}
+    XYZ: {{xyz}}
+</body>
+</html>

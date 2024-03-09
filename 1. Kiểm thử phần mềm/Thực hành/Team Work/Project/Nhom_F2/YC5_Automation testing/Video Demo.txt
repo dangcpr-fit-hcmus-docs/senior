@@ -1,0 +1,8 @@
+Automation Testing for Create a new asset account: https://youtu.be/HMFpAKgwmbg
+Automation Testing for Create a new recurring transaction: https://youtu.be/M9u8-gjt2IY
+Automation Testing for Create Expense Account: https://youtu.be/zAm7aSEp3Z4
+AUtomation Testing for Create Renvenue Account: https://youtu.be/Hqi1SJQGsLY
+Automation Testing for Create Piggy Bank: https://youtu.be/U9tI6PO2ivY
+Automation Testing for Create Expense Transaction: https://youtu.be/4iBnmvSlT4I
+Automation Testing for Create Transaction: https://youtu.be/q7g7eh-7JOg
+Automation Testing for Create Bill: https://youtu.be/EOyuv21_p4I

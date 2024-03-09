@@ -1,0 +1,34 @@
+﻿<Window x:Class="LayoutPractice.Screen1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LayoutPractice"
+        mc:Ignorable="d"
+        Title="Screen1" Height="450" Width="800">
+    <Canvas>
+        <StackPanel Orientation="Horizontal" Height="400">
+            <TextBlock Text="ABC" Background="Red" Width="100"/>
+            <TextBlock Text="ABC" Background="Blue" Width="100"/>
+            <TextBlock Text="ABC" Background="Gray" Width="100"/>
+            <StackPanel Orientation="Vertical" Width="100">
+                <TextBlock Text="ABC" Background="Purple" Height="133"/>
+                <TextBlock Text="ABC" Background="Green" Height="133"/>
+                <TextBlock Text="ABC" Background="Chocolate" Height="133"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Width="300">
+                <TextBlock Text="ABC" Background="Blue" Height="100"/>
+                <StackPanel Orientation="Horizontal" Height="300">
+                    <TextBlock Text="ABC" Background="Red" Width="100"/>
+                    <StackPanel Orientation="Vertical" Width="200">
+                        <StackPanel Orientation="Horizontal" Height="200">
+                            <TextBlock Text="ABC" Background="Gray" Width="100"/>
+                            <TextBlock Text="ABC" Background="Yellow" Width="100"/>
+                        </StackPanel>
+                        <TextBlock Text="ABC" Background="Orange" Height="100"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </Canvas>
+</Window>

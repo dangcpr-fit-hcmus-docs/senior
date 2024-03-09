@@ -1,0 +1,6 @@
+Check amount phải lớn hơn 0 (-0.1, 0, 0.1 - 3 test case).
+Check source và destination acc không được trùng nhau (1 test case).
+Description không được bỏ trống (1 test case).
+Source Account không tồn tại (2 test case).
+Destination Account không tồn tại (2 test case).
+Check thành công (Khoảng 10 test case).
